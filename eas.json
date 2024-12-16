@@ -1,0 +1,46 @@
+{
+  "cli": {
+    "version": ">= 3.4.1",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "ios": {
+        "resourceClass": "m1-medium"
+      }
+    },
+    "preview": {
+      "distribution": "internal",
+      "ios": {
+        "resourceClass": "m1-medium"
+      },
+      "android": {
+        "buildType": "apk"
+      }
+    },
+    "preview2": {
+      "android": {
+        "gradleCommand": ":app:assembleRelease"
+      }
+    },
+    "preview3": {
+      "developmentClient": true
+    },
+    "production": {
+      "ios": {
+        "resourceClass": "m1-medium"
+      },
+      "autoIncrement": true,
+      "env": {
+        "GOOGLE_MAP_API_KEY": "AIzaSyCoISnyV76a5pQ94mzu-lbLoXn2wcFxwTo",
+        "SERVER_URL": "https://shop.vtbazaar.net/api/v1",
+        "IMAGE_URL": "https://shop.vtbazaar.net"
+      }
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}
